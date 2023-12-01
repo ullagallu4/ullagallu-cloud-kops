@@ -1,2 +1,2 @@
 #!/bin/bash
-kops update cluster --name $NAME --yes --admin
+kops update cluster --name ullagallu.cloud --yes --admin

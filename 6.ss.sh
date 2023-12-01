@@ -1,4 +1,4 @@
 #!/bin/bash
-kops edit ig --name=$NAME nodes-ap-south-1a &&
-kops edit ig --name=$NAME control-plane-ap-south-1a &&
-kops update cluster --name $NAME --yes --admin 
+kops edit ig --name=ullagallu.cloud nodes-ap-south-1a &&
+kops edit ig --name=ullagallu.cloud control-plane-ap-south-1a &&
+kops update cluster --name=ullagallu.cloud --yes --admin 

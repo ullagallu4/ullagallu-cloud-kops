@@ -1,15 +1,15 @@
 #!/bin/bash
 kops create cluster \
     --cloud=aws \
-    --name=$NAME \
-    --node-count=$NODE_COUNT \
-    --node-size=$NODE_SIZE \
-    --node-volume-size=$NODE_VOLUME_SIZE \
-    --control-plane-count=$MASTER_COUNT \
-    --control-plane-size=$MASTER_SIZE \
-    --control-plane-volume-size=$MASTER_VOLUME_SIZE \
-    --zones=$ZONES \
-    --state=$KOPS_STATE_STORE \
+    --name=ullagallu.cloud \
+    --node-count=2 \
+    --node-size=t3a.small \
+    --node-volume-size=8 \
+    --control-plane-count=1 \
+    --control-plane-size=t3a.medium \
+    --control-plane-volume-size=8 \
+    --zones=ap-south-1a \
+    --state=s3://ullagallu.kops.cloud \
     --dns=public \
     --dns-zone=ullagallu.cloud \
     --networking=cilium

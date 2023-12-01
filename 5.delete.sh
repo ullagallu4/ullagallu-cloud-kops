@@ -1,2 +1,2 @@
 #!/bin/bash
-kops delete cluster $NAME --yes
+kops delete cluster ullagallu.cloud --yes
