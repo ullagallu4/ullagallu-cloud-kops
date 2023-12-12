@@ -1,0 +1,10 @@
+minikube profile list
+
+
+minikube start --nodes=3 -p <profile-name> --network-plugin=cni --cni=cilium
+
+minikube stop
+minikube stop -p <profile-name>
+minikube delete
+
+

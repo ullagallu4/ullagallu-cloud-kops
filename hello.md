@@ -34,8 +34,37 @@ export NODE_COUNT=2
 export NODE_SIZE=t3a.small
 export NODE_VOLUME_SIZE=8
 export ZONES=ap-south-1a
-export KOPS_STATE_STORE=s3://ullagallu.cloud
+export KOPS_STATE_STORE=s3://ullagallu.kops.cloud
 
 export VERIFY_CHECKSUM=false
 
 export PATH
+
+
+
+
+
+
+
+
+
+
+
+Suggestions:
+ * list clusters with: kops get cluster
+ * edit this cluster with: kops edit cluster ullagallu.cloud
+ * edit your node instance group: kops edit ig --name=ullagallu.cloud nodes-ap-south-1a
+ * edit your control-plane instance group: kops edit ig --name=ullagallu.cloud control-plane-ap-south-1a
+
+Finally configure your cluster with: kops update cluster --name ullagallu.cloud --yes --admin
+
+Suggestions:
+ * validate cluster: kops validate cluster --wait 10m
+ * list nodes: kubectl get nodes --show-labels
+ * ssh to a control-plane node: ssh -i ~/.ssh/id_rsa ubuntu@api.ullagallu.cloud
+ * the ubuntu user is specific to Ubuntu. If not using Ubuntu please use the appropriate user based on your OS.
+ * read about installing addons at: https://kops.sigs.k8s.io/addons.
+
+
+
+
